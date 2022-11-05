@@ -1,3 +1,14 @@
+## Build with Custom Conda Environment in Windows
+
+Using a newly created conda environment with chosen python version. Below example is for using python 3.9.
+
+- Replace, `find_package(Python 3.7 COMPONENTS Interpreter Development)` with `find_package(Python 3.9 COMPONENTS Interpreter Development)` in [CMakeLists.txt](https://github.com/quickgrid/instant-ngp/blob/54aba7cfbeaf6a60f29469a9938485bebeba24c3/CMakeLists.txt#L202).
+
+- Add system environment variable `Path` to `C:\Users\user_name\miniconda3\envs\my_env` and `C:\Users\user_name\miniconda3\envs\my_env\Scripts`. (May not be necessary)
+
+- Restart visual studio developer command prompt and run the build process as shown below.
+
+
 # Instant Neural Graphics Primitives ![](https://github.com/NVlabs/instant-ngp/workflows/CI/badge.svg)
 
 <img src="docs/assets_readme/fox.gif" height="342"/> <img src="docs/assets_readme/robot5.gif" height="342"/>
